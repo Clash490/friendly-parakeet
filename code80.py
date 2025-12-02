@@ -4,6 +4,7 @@ import matplotlib.pyplot as diagram
 receipt = PrettyTable()
 receipt.field_names = ['№','Продукт','Цена','Количество','Стоимость']
 
+# Списки для данных диаграммы
 products = []
 pay = []
 
@@ -18,10 +19,12 @@ for i in range(3):
 
 print(receipt)
 
-diagram.bar(products, pay)
+diagram.bar(products, pay, color = 'red')
 diagram.title('Стоимость покупок')
 diagram.xlabel('Продукты')
 diagram.ylabel('Стоимость (руб)')
 
 diagram.show()
+
+
 
